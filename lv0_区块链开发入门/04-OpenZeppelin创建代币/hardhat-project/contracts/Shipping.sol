@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >=0.4.25 <0.9.0;
+pragma solidity ^0.8.27;
 
 contract Shipping {
     // 预先定义的运输值以枚举形式列出

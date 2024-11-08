@@ -8,6 +8,10 @@ pragma solidity ^0.8.21;
 contract functionTypes {
     uint256 public number = 5;
 
+    constructor() payable {}
+
+    // 函数类型
+    // function (<parameter types>) {internal|external} [pure|view|payable] [returns (<return types>)]
     // 默认function
     function add() external {
         number = number + 1;

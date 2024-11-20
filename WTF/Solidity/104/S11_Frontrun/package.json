@@ -1,0 +1,14 @@
+{
+  "name": "ethers_examples",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CLM",
+  "license": "MIT",
+  "type": "module",
+  "description": "Minimal Tutorial to Ethers.js",
+  "dependencies": {
+    "ethers": "^5.7.1"
+  }
+}

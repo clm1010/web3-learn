@@ -12,6 +12,15 @@ contract Bank {
     function transfer(address payable _to, uint _amount) public {
         // 检查消息来源
         require(tx.origin == owner, "Not owner");
+        // 预防办法
+        // 1.使用msg.sender代替tx.origin
+        // msg.sender能够获取直接调用当前合约的调用发送者地址，通过对msg.sender的检验，就可以避免整个调用过程中混入外部攻击合约对当前合约的调用
+        // require(msg.sender == owner, "Not owner");
+        
+        // 2.检验tx.origin == msg.sender
+        // require(tx.origin == msg.sender, "can't call by external contract");
+        // 如果一定要使用tx.origin，那么可以再检验tx.origin是否等于msg.sender，这样也可以避免整个调用过程中混入外部攻击合约对当前合约的调用。但是副作用是其他合约将不能调用这个函数。
+        
         // 转账ETH
         (bool sent, ) = _to.call{value: _amount}("");
         require(sent, "Failed to send Ether");

@@ -4,3 +4,6 @@
 [submodule "WTF/Solidity/104/S14_TimeManipulation/TimeManipulation/lib/openzeppelin-contracts"]
 	path = WTF/Solidity/104/S14_TimeManipulation/TimeManipulation/lib/openzeppelin-contracts
 	url = https://github.com/Openzeppelin/openzeppelin-contracts
+[submodule "WTF/Solidity/104/S15_OracleManipulation/Oracle/lib/forge-std"]
+	path = WTF/Solidity/104/S15_OracleManipulation/Oracle/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

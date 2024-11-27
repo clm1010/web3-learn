@@ -1,6 +1,6 @@
-artifacts/
-.deps/
-.states/
+artifacts
+.deps
+.states
 .env
-node_modules/
+node_modules
 package-lock.json

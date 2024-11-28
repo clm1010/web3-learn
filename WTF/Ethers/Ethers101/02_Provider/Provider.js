@@ -14,9 +14,9 @@ const ALCHEMY_MAINNET_URL = `https://eth-mainnet.g.alchemy.com/v2/${process.env.
 const ALCHEMY_SEPOLIA_URL = `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`;
 
 // 连接以太坊主网
-const providerETH = new ethers.providers.JsonRpcProvider(ALCHEMY_MAINNET_URL);
+const providerETH = new ethers.JsonRpcProvider(ALCHEMY_MAINNET_URL);
 // 连接Sepolia测试网
-const providerSepolia = new ethers.providers.JsonRpcProvider(ALCHEMY_SEPOLIA_URL);
+const providerSepolia = new ethers.JsonRpcProvider(ALCHEMY_SEPOLIA_URL);
 
 const main = async () => {
   // 利用provider读取链上信息
@@ -25,9 +25,9 @@ const main = async () => {
   const balance = await providerETH.getBalance(`vitalik.eth`);
   const balanceSepolia = await providerSepolia.getBalance(`0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045`);
   // 将余额输出在console（主网）
-  console.log(`ETH Balance of vitalik: ${ethers.utils.formatEther(balance)} ETH`);
+  console.log(`ETH Balance of vitalik: ${ethers.formatEther(balance)} ETH`);
   // 输出Sepolia测试网ETH余额
-  console.log(`Sepolia ETH Balance of vitalik: ${ethers.utils.formatEther(balanceSepolia)} ETH`);
+  console.log(`Sepolia ETH Balance of vitalik: ${ethers.formatEther(balanceSepolia)} ETH`);
 
   // 2.查询provider连接到了哪条链
   console.log("\n2. 查询provider连接到了哪条链");

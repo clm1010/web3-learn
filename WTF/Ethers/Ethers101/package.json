@@ -1,5 +1,5 @@
 {
-  "name": "02_Provider",
+  "name": "Ethers101-Examples",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,9 @@
   "author": "CLM",
   "license": "MIT",
   "type": "module",
-  "description": "ethers",
+  "description": "Minimal Tutorial to Ethers.js",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "ethers": "^5.7.2"
+    "ethers": "^6.13.4"
   }
 }

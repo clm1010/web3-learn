@@ -15,7 +15,11 @@ interface IERC20 {
     /**
      * @dev 释放条件：当 `value` 单位的货币从账户 (`owner`) 授权给另一账户 (`spender`)时.
      */
-    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 value
+    );
 
     /**
      * @dev 返回代币总供给.
@@ -41,7 +45,10 @@ interface IERC20 {
      *
      * 当{approve} 或 {transferFrom} 被调用时，`allowance`会改变.
      */
-    function allowance(address owner, address spender) external view returns (uint256);
+    function allowance(
+        address owner,
+        address spender
+    ) external view returns (uint256);
 
     /**
      * @dev 调用者账户给`spender`账户授权 `amount`数量代币。

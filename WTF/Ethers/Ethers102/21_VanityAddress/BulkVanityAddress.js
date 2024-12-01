@@ -11,7 +11,7 @@ async function CreateWallet(regexList) {
   //https://github.com/WTFAcademy/WTFEthers/blob/main/21_VanityAddress/readme.md
   while (!isValid && regexList.length > 0) {
     wallet = ethers.Wallet.createRandom()
-    const index = regexList.findIndex((regex) => regexList.text(wallet.address))
+    const index = regexList.findIndex((regex) => regex.test(wallet.address))
     // 移除匹配的正则表达式
     if (index !== -1) {
       isValid = true

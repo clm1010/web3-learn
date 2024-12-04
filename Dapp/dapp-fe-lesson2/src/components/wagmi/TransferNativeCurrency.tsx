@@ -11,9 +11,10 @@ const Transfer = () => {
 
   const handleTransfer = () => {
     const res = sendTransaction({
-      to: `0x${TO_ADDRESS}`,
+      to: TO_ADDRESS,
       value: parseEther('0.001')
     })
+    console.log('res', res)
   }
   console.log(status, 'status', data, 'data', txData, 'txData')
   return (

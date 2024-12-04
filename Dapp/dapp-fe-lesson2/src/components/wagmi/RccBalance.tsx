@@ -8,7 +8,7 @@ import { abi } from '@/abis/abi'
 const RccBalance = ({ address }: { address: Address }) => {
   const result = useReadContract({
     abi: stakeAbi,
-    address: `0x${RccTokenContract}`,
+    address: RccTokenContract,
     functionName: 'stakingBalance',
     args: [BigInt(Pid), address as Address]
   })

@@ -24,22 +24,27 @@ npm install
 npx hardhat compile
 ```
 
-## 部署 Rcc token
+## 测试部署、合约
 
 ```shell
-npx hardhat ignition deploy ./ignition/modules/Rcc.js
+npx hardhat test test/RCCStake.test.js
 ```
 
-部署之后在 terminal 拿到合约地址,比如: `0x264e0349deEeb6e8000D40213Daf18f8b3dF02c3`
-
-## 部署完 Rcc Token,拿以上地址作为 RCCStake 合约的初始化参数,在 RCCStake 中设置
+## 部署 RCC Token 和 RCCStake 到测试网 sepolia
 
 ```shell
-const RccToken = "0x264e0349deEeb6e8000D40213Daf18f8b3dF02c3";
+npx hardhat run scripts/deploy.js  --network sepolia
 ```
 
-## 将 stake 合约部署到 sepolia 上
+## 部署成功后 执行 verify 验证 token 、合约或代理可升级合约
 
 ```shell
-npx hardhat run scripts/RCCStake.js --network sepolia
+npx hardhat verify <Token 地址> <Token 参数: "RCC Token" "RCC" "18" "1000000000000000000000000"> --network sepolia
+npx hardhat verify <合约地址或合约代理地址> --network sepolia
+```
+
+## 部署成功并验证成功后，执行 interact.js 初始化合约
+
+```shell
+npx hardhat run scripts/interact.js  --network sepolia
 ```

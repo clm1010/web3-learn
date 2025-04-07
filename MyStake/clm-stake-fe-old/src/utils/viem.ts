@@ -1,4 +1,4 @@
-// import { mainnet } from 'viem/chains'
+import { mainnet } from 'viem/chains'
 import { sepolia } from 'viem/chains'
 import { PublicClient, createPublicClient, http } from 'viem'
 
